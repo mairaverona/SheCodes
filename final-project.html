@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=>, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: linear-gradient(
+          rgb(250, 231, 196),
+          rgb(244, 239, 196)
+        );
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      h1 {
+        color: #f68645;
+        font-size: 50px;
+        font-weight: 100;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        text-align: center;
+        margin-bottom: 0px;
+      }
+      p {
+        text-align: center;
+        line-height: normal;
+        font-size: 20px;
+        font-weight: 90;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fc6045;
+        margin-bottom: 30px;
+      }
+      .love {
+        color: #f6975c;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: xx-large;
+        margin-bottom: 45px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        border: 10px;
+        border-radius: 10px;
+      }
+      button {
+        border: 1px solid grey;
+        border-radius: 20px;
+        box-shadow: 1px 1px 1px 1px #b2b2b2;
+        background: transparent;
+        display: block;
+        margin: 0 auto;
+        padding: 15px;
+        color: #c0aa30;
+        font-size: 14px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        transition: 200ms ease-in-out;
+      }
+      button:hover {
+        background: white;
+        color: rgb(255, 150, 89);
+        cursor: pointer;
+      }
+      a {
+        text-decoration: solid;
+        color: #f57b7b;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .message {
+        font-size: medium;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        color: #51440a;
+      }
+      .address {
+        font-size: small;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: darkgoldenrod;
+      }
+
+      .hello {
+        margin-top: 30px;
+      }
+      div {
+        text-align: center;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <strong>📚 Goodreads 📚</strong>
+    </h1>
+    <p class="love"><em>Meet your new favourite book!</em></p>
+    <p>
+      Goodreads is the world's largest site for readers and book
+      recommendations.
+      <br />
+      On the website, users can add books to their personal bookshelves,
+    </p>
+    <img
+      src="https://miro.medium.com/max/1400/0*Q_aOmiYtvNe9wQnx"
+      width="500"
+    />
+    <p class="hello">
+      rate and review books, see what their friends and authors are reading and
+      get
+      <br />
+      suggestions for future reading choices based on their reviews of
+      previously read books.
+    </p>
+    <div>
+      <a href="https://www.goodreads.com/" target="blank"> Learn more! </a>
+    </div>
+    <button>Join the community!</button>
+    <div>
+      <span class="message">Coded by:</span>
+      <span class="address">Maira Verona</span>
+    </div>
+  </body>
+  <script>
+    function yourName() {
+      let name = prompt("What is your name?");
+      let email = prompt("What is your email address?");
+      if (email.length > 0 && validateEmail(email)) {
+        alert("Thank you " + name + "! " + "Check your email! 🤓");
+      } else {
+        alert("Sorry, I didn't get that 🙁");
+      }
+    }
+    let contactButton = document.querySelector("button");
+    contactButton.addEventListener("click", yourName);
+    const validateEmail = (email) => {
+      return String(email)
+        .toLowerCase()
+        .match(
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+    };
+  </script>
+</html>
